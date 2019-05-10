@@ -19,7 +19,7 @@ github.com/mattn/go-isatty
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v1.0.1
 github.com/modern-go/reflect2
-# github.com/mthomasuk/toast v0.0.0-20190510133651-791927e2f4bc
+# github.com/mthomasuk/toast v0.0.0-20190510163410-2e90ae03b858
 github.com/mthomasuk/toast/cipher
 github.com/mthomasuk/toast/crypto
 github.com/mthomasuk/toast/rsa

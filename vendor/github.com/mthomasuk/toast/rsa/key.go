@@ -53,9 +53,6 @@ func ParsePKCS1KeyByCert(publicKey, privateKey []byte) (Key, error) {
 }
 
 func LoadKeyFromPEMFile(publicKeyFilePath, privateKeyFilePath string, ParseKey func([]byte, []byte) (Key, error)) (Key, error) {
-
-	//TODO 断言如果入参为"" ，则直接报错
-
 	publicKeyFilePath = strings.TrimSpace(publicKeyFilePath)
 
 	pukBytes, err := ioutil.ReadFile(publicKeyFilePath)
@@ -65,7 +62,7 @@ func LoadKeyFromPEMFile(publicKeyFilePath, privateKeyFilePath string, ParseKey f
 
 	puk, _ := pem.Decode(pukBytes)
 	if puk == nil {
-		return nil, errors.New("publicKey is not pem formate")
+		return nil, errors.New("publicKey is not in PEM format")
 	}
 
 	privateKeyFilePath = strings.TrimSpace(privateKeyFilePath)
@@ -77,28 +74,25 @@ func LoadKeyFromPEMFile(publicKeyFilePath, privateKeyFilePath string, ParseKey f
 
 	prk, _ := pem.Decode(prkBytes)
 	if prk == nil {
-		return nil, errors.New("privateKey is not pem formate")
+		return nil, errors.New("privateKey is not in PEM format")
 	}
 
 	return ParseKey(puk.Bytes, prk.Bytes)
 }
 
-
-//Eason Lin
 func LoadKeyFromPEMByte(pukBytes, prkBytes []byte, ParseKey func([]byte, []byte) (Key, error)) (Key, error) {
 	puk, _ := pem.Decode(pukBytes)
 	if puk == nil {
-		return nil, errors.New("publicKey is not pem formate")
+		return nil, errors.New("publicKey is not in PEM format")
 	}
 
 	prk, _ := pem.Decode(prkBytes)
 	if prk == nil {
-		return nil, errors.New("privateKey is not pem formate")
+		return nil, errors.New("privateKey is not in PEM format")
 	}
 
 	return ParseKey(puk.Bytes, prk.Bytes)
 }
-
 
 func LoadKeyFromDerFile(publicKeyFilePath, privateKeyFilePath string, ParseKey func([]byte, []byte) (Key, error)) (Key, error) {
 
@@ -118,8 +112,6 @@ func LoadKeyFromDerFile(publicKeyFilePath, privateKeyFilePath string, ParseKey f
 
 	return ParseKey(pukBytes, prkBytes)
 }
-
-
 
 type key struct {
 	publicKey  *rsa.PublicKey
