@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/easonlin404/ksm/crypto/aes"
-	"github.com/easonlin404/ksm/crypto/rsa"
-	"github.com/easonlin404/ksm/d"
+	"github.com/mthomasuk/ksm/crypto/aes"
+	"github.com/mthomasuk/ksm/crypto/rsa"
+	"github.com/mthomasuk/ksm/d"
 )
 
 // SPCContainer represents a container to contain SPC message filed.
