@@ -32,7 +32,6 @@ func newPadding(lessThanModulus int) Padding {
 	return &padding{lessThanModulus: lessThanModulus}
 }
 
-/*数据太长的时候，要按照秘钥的长度对数据进行分组*/
 func grouping(src []byte, size int) [][]byte {
 
 	var groups [][]byte

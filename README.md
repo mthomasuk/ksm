@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/easonlin404/ksm.svg)](https://travis-ci.org/easonlin404/ksm)
 [![codecov](https://codecov.io/gh/easonlin404/ksm/branch/master/graph/badge.svg)](https://codecov.io/gh/easonlin404/ksm)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mthomasuk/ksm)](https://goreportcard.com/report/github.com/mthomasuk/ksm)
-[![GoDoc](https://godoc.org/github.com/mthomasuk/ksm?status.svg)](https://godoc.org/github.com/mthomasuk/ksm)
+[![Go Report Card](https://goreportcard.com/badge/github.com/getfiit/ksm)](https://goreportcard.com/report/github.com/getfiit/ksm)
+[![GoDoc](https://godoc.org/github.com/getfiit/ksm?status.svg)](https://godoc.org/github.com/getfiit/ksm)
 
 
 Apple FairPlay Streaming ([FPS](https://developer.apple.com/streaming/fps/)) securely delivers keys to Apple mobile devices, Apple TV, and Safari on OS X, which will enable playback of encrypted video content. 
@@ -17,7 +17,7 @@ This project is FairPlay Streaming Key Security Module written in Go (Golang).
 Download and install it:
 
 ```bash
-$ go get github.com/mthomasuk/ksm
+$ go get github.com/getfiit/ksm
 ```
 
 ### Verify ckc
@@ -39,8 +39,8 @@ import (
 	"math/rand"
 	"net/http"
 
-	"github.com/mthomasuk/ksm"
-	"github.com/mthomasuk/ksm/d"
+	"github.com/getfiit/ksm"
+	"github.com/getfiit/ksm/d"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )
@@ -120,7 +120,7 @@ func (RandomContentKey) FetchContentKeyDuration(assetId []byte) (*ksm.CkcContent
 ## FAQ
 ### How to send sample SPC data?
 
-Our [example/basic.go](https://github.com/mthomasuk/ksm/blob/master/example/basic.go) router has to accepted SPC parameter that is base64 encoding. And [testdata/spc1.bin](https://github.com/mthomasuk/ksm/blob/master/testdata/FPS/spc1.bin) is binary file, so you have to encode to base64  string.
+Our [example/basic.go](https://github.com/getfiit/ksm/blob/master/example/basic.go) router has to accepted SPC parameter that is base64 encoding. And [testdata/spc1.bin](https://github.com/getfiit/ksm/blob/master/testdata/FPS/spc1.bin) is binary file, so you have to encode to base64  string.
 
 
 After run as local server, you can test sample POST request using [httpie](https://httpie.org/) tool(spc is spc1.bin base64 encoding):

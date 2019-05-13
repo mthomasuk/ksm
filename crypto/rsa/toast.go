@@ -3,8 +3,8 @@ package rsa
 import (
 	"log"
 
-	"github.com/mthomasuk/toast/crypto"
-	"github.com/mthomasuk/toast/rsa"
+	"github.com/getfiit/toast/crypto"
+	"github.com/getfiit/toast/rsa"
 )
 
 //RSA/ECB/OAEPPadding

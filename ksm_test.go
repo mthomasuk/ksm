@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mthomasuk/ksm/d"
+	"github.com/getfiit/ksm/d"
 	"github.com/stretchr/testify/assert"
 )
 

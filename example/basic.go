@@ -6,8 +6,8 @@ import (
 	"math/rand"
 	"net/http"
 
-	"github.com/mthomasuk/ksm"
-	"github.com/mthomasuk/ksm/d"
+	"github.com/getfiit/ksm"
+	"github.com/getfiit/ksm/d"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )
